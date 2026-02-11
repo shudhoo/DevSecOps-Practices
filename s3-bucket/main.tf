@@ -1,4 +1,4 @@
-# 1. Define the Provider OK
+# 1. Define the Provider OK tt
 provider "aws" {
   region = "ap-south-1"
 }
