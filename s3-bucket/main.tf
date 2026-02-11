@@ -8,7 +8,7 @@ resource "random_id" "bucket_suffix" {
   byte_length = 4
 }
 
-# 3. Create the S3 Bucket
+# 3. Create the S3 Bucket test
 resource "aws_s3_bucket" "vault_test_bucket" {
   bucket = "devsecops-vault-demo-${random_id.bucket_suffix.hex}"
 
