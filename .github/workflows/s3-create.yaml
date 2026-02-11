@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./s3.bucket
+        working-directory: ./s3-bucket
 
     steps:
 
@@ -24,7 +24,7 @@ jobs:
            "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=vault" | jq -r '.value')
    
          echo "$TOKEN" | cut -d "." -f2 | base64 -d | jq . 
-         
+
       - name: Fetch Keys from Vault
         uses: hashicorp/vault-action@v3
         with:
